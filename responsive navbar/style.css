@@ -41,6 +41,7 @@ width: 25px;
 height: 3px;
 background-color: rgb(226, 226, 226);
 margin: 5px;
+transition: all 0.3s ease;
 }
 
 @media screen and (max-width:1024px) {
@@ -64,7 +65,7 @@ margin: 5px;
       flex-direction: column;
       align-items: center;
       width: 50%;
-      transform: translate(100%);
+      transform: translateX(100%);
       transition: transform 0.5s ease-in;
   } 
 
@@ -80,13 +81,24 @@ margin: 5px;
 transform: translateX(0%);
 }
 
-@keyframes navlinkFade {
+@keyframes navLinkFade{
     from{
         opacity: 0;
-        transform: translate(50px);
+        transform: translateX(50px);
     }
     to{
         opacity: 1;
-        transform: translate(0px);
+        transform: translateX(0px);
     }
+}
+.toggle .line1{
+transform: rotate(-45deg,) translate(-5px, 6px);
+}
+
+.toggle .line2{
+ opacity: 0;   
+}
+
+.toggle .line3{
+    transform: rotate(-45deg,) translate(-5px, 6px);  
 }
